@@ -14,7 +14,7 @@ button {
 body {
 
     /* Queiro que el color de fundo sea negro */
-    background-color: black;
+    /* background: rgba(35, 34, 34, 0.742) url(assets/cranio.jpg) no-repeat center; */
     /* Queiro que el color de las cosas sea blanco */
     color: white;
     /* Para ocupar toda la pantalla */
@@ -22,10 +22,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(127, 219, 219);
+
 }
 
 .container {
 
+    /* class container: modificando dentro del div donde estarán las preguntas */
+    background-color: rgba(136, 136, 143, 0.771);
+    width: 45%;
+    max-width: 800%;
+    /* border radius para dejar la borde un poco redondeado */
+    border-radius: 35px;
+    padding: 30px;
+    border: 2px solid #e6141b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
 
+.questions-container {
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* espacio que usamos para el espacio de los elementos que están dentro del div, en este caso los botones */
+    gap: 15px;
+    justify-content: center;
+
+}
+
+.questions {
+
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
 }
