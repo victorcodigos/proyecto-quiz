@@ -1,5 +1,31 @@
-/* { 
-   // background-color: blue;
+* {
+    /* dejar todo en el mismo patron */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+
+    /* dejar todos os buttons iguales */
+    cursor: pointer;
+}
+
+body {
+
+    /* Queiro que el color de fundo sea negro */
+    background-color: black;
+    /* Queiro que el color de las cosas sea blanco */
+    color: white;
+    /* Para ocupar toda la pantalla */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+
 
 
 }
