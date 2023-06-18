@@ -1,9 +1,11 @@
 const startGameButton = document.querySelector(".start-quiz") // criar una variable para empezar el juego
 const questionsContainer = document.querySelector(".questions-container") // coger la div que tenga la class container 
 const answers = document .querySelector(".answers") // remove los hijos que esta div pueda tener 
-
+const questionSpan = document.querySelector(".question") // vamos coger la class span del html 
 
 startGameButton.addEventListener("click", startGame) // capturar el evento click para empezar el juego
+
+let currentQuestion = 0; // criamos una variable auxilar para saber en cual preguntas estamos
 
 function startGame() {
     startGameButton.classList.add("hide") // added a class hide para que el button pueda desaparecer
@@ -18,6 +20,18 @@ function displayNextquestion() { // esta función es para apresentar la proxima 
 
     } 
 
+    questionSpan.textContent = questions[currentQuestion].question // aqui vamos coger la primera pregunta 
+    questions[currentQuestion].answers.forEach(answer => {  // esa función flecha es para acceder a las respuestas de la prugunta 1
+       const newAnswer = document.createElement("button")   // criar un elemento button para cada una das posibles respuestas 
+       newAnswer.classList.add("button", "answer")  // added las dos class que estan dentro de la div answers
+       newAnswer.textContent = answer.text // added las answer que estan dentro de la función con el forEach
+       if (answer.correct) {
+         newAnswer.dataset.correct = answer.correct // added la info en el button en caso de la respuestas sea la correcta 
+
+       }
+
+       answers.appendChild(newAnswer) // added un nuevo elemento con el appendChild , added elemento hijo (newAnswer)
+   } )
 }
 
 const questions = [                                                      // criamos una variable questions de tipo array 
