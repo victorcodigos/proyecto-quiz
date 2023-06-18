@@ -91,10 +91,14 @@ body {
     transition: filter 0.4s;
 
 }
-
-button:hover {
+/* Si el botón está seleccionado, elimine el sombreado sobre los botones */
+button:not(:disabled):hover {
 
     filter: brightness(0.9);
+}
+ /* El user no puede selecionar la respuesta dos veces, el button se queda disabled */
+.button:disabled {
+    cursor: not-allowed;
 }
 
 .hide {
