@@ -31,8 +31,16 @@ function displayNextquestion() { // esta función es para apresentar la proxima 
        }
 
        answers.appendChild(newAnswer) // added un nuevo elemento con el appendChild , added elemento hijo (newAnswer)
-   } )
+       
+       newAnswer.addEventListener ("click", selectAnswerCorrect) // Comprobar si el usuario eligió la respuesta correcta, vamos criar una función
+    } )
 }
+
+    function selectAnswerCorrect (e) {  // Cuando tenemos un evento del tipo addEventListener y temos la función selectAnswerCorrect podemos tener el parametro del tipo evento.
+        console.log(e.target)
+    }
+    
+
 
 const questions = [                                                      // criamos una variable questions de tipo array 
     {
