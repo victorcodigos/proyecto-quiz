@@ -64,7 +64,7 @@ body {
 
 .answers {
 
-    grid-template-columns: 2fr 2fr ;
+    grid-template-columns: 2fr 2fr;
     gap: 20px;
     display: grid;
     width: 100%;
@@ -74,7 +74,7 @@ body {
 .next-question {
 
     margin-top: 15px;
-    
+
 }
 
 .button {
@@ -101,4 +101,15 @@ button:hover {
 
     display: none;
 
+}
+
+.correct {
+
+    background-color: green;
+
+}
+
+.incorrect {
+
+    background-color: red;
 }

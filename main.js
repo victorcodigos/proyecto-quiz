@@ -32,12 +32,27 @@ function displayNextquestion() { // esta función es para apresentar la proxima 
 
        answers.appendChild(newAnswer) // added un nuevo elemento con el appendChild , added elemento hijo (newAnswer)
        
-       newAnswer.addEventListener ("click", selectAnswerCorrect) // Comprobar si el usuario eligió la respuesta correcta, vamos criar una función
+       newAnswer.addEventListener ("click", selectAnswerCorrect) // Comprobar si el user eligió la respuesta correcta, vamos criar una función
     } )
 }
 
     function selectAnswerCorrect (e) {  // Cuando tenemos un evento del tipo addEventListener y temos la función selectAnswerCorrect podemos tener el parametro del tipo evento.
-        console.log(e.target)
+        const answerClicked = e.target
+        if (answerClicked.dataset.correct) {  // Si el botón en el que hizo clic tiene el dataSet, entonces su respuesta es correcta.
+        document.body.classList.add("correct") // si la respuesta esta correcta, que se quede en color verde 
+        } else {  
+        document.body.classList.add("incorrect") // si la respuesta esta incorrecta, que se quede en color rojo
+        }
+
+    document.querySelectorAll(".answer").forEach(button => {
+       if (button.dataset.correct) {
+       button.classList.add("correct") // Si la respuesta es correcta, notifique la respuesta en verde
+       } else {
+       button.classList.add("incorrect") // Si la respuesta es incorrecta, notifique la respuesta en rojo 
+       }
+       button.disabled = true; // El user puede selecionar la respuesta apenas una vez
+    })
+
     }
     
 
