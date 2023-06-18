@@ -57,7 +57,48 @@ body {
 
 .questions {
 
-    font-size: 24px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
+}
+
+.answers {
+
+    grid-template-columns: 2fr 2fr ;
+    gap: 20px;
+    display: grid;
+    width: 100%;
+    font-size: 15px;
+}
+
+.next-question {
+
+    margin-top: 15px;
+    
+}
+
+.button {
+
+    background-color: rgb(97, 97, 212);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0;
+    height: 50px;
+    padding: 0 100px;
+    border-radius: 10px;
+    text-align: center;
+    transition: filter 0.4s;
+
+}
+
+button:hover {
+
+    filter: brightness(0.9);
+}
+
+.hide {
+
+    display: none;
+
 }
