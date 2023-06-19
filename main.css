@@ -22,7 +22,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(127, 219, 219);
+    /* background-image: url(assets/planets.jpg); */
+    background: rgba(125, 180, 216, 0.788);
+    
+
 
 }
 
@@ -116,4 +119,20 @@ button:not(:disabled):hover {
 .incorrect {
 
     background-color: red;
+}
+
+.final-message {
+
+    font-size: 25px;
+    text-align: center;
+    
+    
+    
+}
+
+.final-message span {
+
+    display: block;
+    margin-top: 15px;
+
 }
