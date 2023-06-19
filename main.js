@@ -120,9 +120,73 @@ const questions = [
         ]
 
     },
+
+    {
+        question: "Which musical artist had a prominent role in the 2017 film Kingsman: The Golden Circle?", 
+        answers: [                                                      
+            { text: "<Lady Gaga>", correct: false },                    
+            { text: "<Elton John>", correct: true },
+            { text: "<Justin Bieber>", correct: false },
+            { text: "<Rihanna>", correct: false }                       
+        ]
+
+    },
+
+    {
+        question: "How many episodes were in season five of Samurai Jack?", 
+        answers: [                                                      
+            { text: "<12>", correct: false },                    
+            { text: "<11>", correct: false },
+            { text: "<10>", correct: true },
+            { text: "<9>", correct: false }                       
+        ]
+
+    },
+
+    {
+        question: "Who starred as Bruce Wayne and Batman in Tim Burtonv in 1989 movie Batman?", 
+        answers: [                                                      
+            { text: "<Michael Keaton>", correct: true },                    
+            { text: "<George Clooney>", correct: false },
+            { text: "<Val Kilmer>", correct: false },
+            { text: "<Adam West>", correct: false }                       
+        ]
+
+    },
+
+    {
+        question: "Who led the Communist Revolution of Russia?", 
+        answers: [                                                      
+            { text: "<Mikhail Gorbachev>", correct: false },                    
+            { text: "<Vladimir Putin>", correct: false },
+            { text: "<Joseph Stali>", correct: false },
+            { text: "<Vladimir Lenin>", correct: true }                       
+        ]
+
+    },
+
+    {
+        question: "How many teeth does an adult rabbit have?", 
+        answers: [                                                      
+            { text: "<26>", correct: false },                    
+            { text: "<35>", correct: false },
+            { text: "<28>", correct: true },
+            { text: "<32>", correct: false }                       
+        ]
+
+    },
+
+    {
+        question: "What is the largest organ of the human body?", 
+        answers: [                                                      
+            { text: "<Skin>", correct: true },                    
+            { text: "<Heart>", correct: false },
+            { text: "<arge Intestine>", correct: false },
+            { text: "<Liver>", correct: false }                       
+        ]
+
+    },
 ]
-
-
 
 
 
