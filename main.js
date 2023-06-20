@@ -9,29 +9,6 @@ const nextQuestionButton = document.querySelector(".next-question") // una class
 startGameButton.addEventListener("click", startGame) // capturar el evento click para empezar el juego
 nextQuestionButton.addEventListener("click", displayNextquestion) // hacer que la siguiente pregunta aparezca en la pantalla
 
-let objectQuestions = {};
-let selectQuestion = {};
-
-let questionsArrayObjects = [];
-let questionsArray = [];
-let incorrectAnswersArray = [];
-let totalAnswersArray = [];
-let selectIncorrectAnswersArray = [];
-let randomAnswersArray = [];
-
-let questionsString = "";
-let correctAnswerString = "";
-let incorrectAnswersString = "";
-let answerSelected = "";
-let selectCorrectAnswer = "";
-
-let answerButton;
-let correctAnswerSelector;
-
-let indexQuestion = 0;
-let indexCorrectQuestion = 0;
-let indexIncorrectQuestion = 0;
-
 
 
 let currentQuestion = 0; // criamos una variable auxilar para saber en cual preguntas estamos
