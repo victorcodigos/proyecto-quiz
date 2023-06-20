@@ -1,4 +1,4 @@
-// https://opentdb.com/api.php?amount=1 question from here, I selected one by one because 10 by ten is too confusing
+// https://opentdb.com/api.php?amount=1 question from here, I selected one by one because 10 by 10 is too confusing
 
 const startGameButton = document.querySelector(".start-quiz") // criar una variable para empezar el juego
 const questionsContainer = document.querySelector(".questions-container") // coger la div que tenga la class container 
@@ -8,6 +8,31 @@ const nextQuestionButton = document.querySelector(".next-question") // una class
 
 startGameButton.addEventListener("click", startGame) // capturar el evento click para empezar el juego
 nextQuestionButton.addEventListener("click", displayNextquestion) // hacer que la siguiente pregunta aparezca en la pantalla
+
+let objectQuestions = {};
+let selectQuestion = {};
+
+let questionsArrayObjects = [];
+let questionsArray = [];
+let incorrectAnswersArray = [];
+let totalAnswersArray = [];
+let selectIncorrectAnswersArray = [];
+let randomAnswersArray = [];
+
+let questionsString = "";
+let correctAnswerString = "";
+let incorrectAnswersString = "";
+let answerSelected = "";
+let selectCorrectAnswer = "";
+
+let answerButton;
+let correctAnswerSelector;
+
+let indexQuestion = 0;
+let indexCorrectQuestion = 0;
+let indexIncorrectQuestion = 0;
+
+
 
 let currentQuestion = 0; // criamos una variable auxilar para saber en cual preguntas estamos
 let totalTheAnswerCorrect = 0; // vamos crear una variable para saber cuántas preguntas acertó el user
@@ -40,7 +65,7 @@ function displayNextquestion() { // esta función es para apresentar la proxima 
 
         newAnswer.addEventListener("click", selectAnswerCorrect) // Comprobar si el user eligió la respuesta correcta, vamos criar una función
     })
-}
+} 
 
 function resetAll() {
     while (answers.firstChild) { // Para remover el primero hijo del elemento padre que seria el answers
@@ -118,6 +143,7 @@ function finishTheQuiz() {
  propiedad answer que es un array con las posibles respuestas
  cada respuesta teines una propiedad correct que nos indica true o false
 */
+
 
 
 const questions = [
@@ -232,3 +258,5 @@ const questions = [
 
     },
 ]
+
+
