@@ -1,53 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO QUIZ </title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
 
+<body>
     <nav>
-        <span class="icon"> Victor </span>
-        <ul class="menu">
-            <li class="item1" value="Formulario"></li>
-            
-        </ul>
+
+        <span id="homeNav">home</span>
+
+        <span id="aboutNav">about</span>
+
+        <span id="contactNav">contact</span>
 
     </nav>
 
-    <main>
+    <div id="home">
 
-        <section id="containerX"></section>
-    </main>
-    
+        <h1>Home Page</h1>
+
+    </div>
+
+    <div id="about" class="hide">
+
+        <h1>About page</h1>
+
+    </div>
 
     <div class="container">
         <div class="questions-container hide">
-        <span class ="question"> Questions here </span>
-        <br> <div class="answers">
-        <button class="answer button"> answer:  1 </button>
-        <button class="answer button"> answer:  2 </button>
-        <button class="answer button"> answer:  3 </button>
-        <button class="answer button"> answer:  4 </button>
-        <button class="answer button"> answer:  5 </button>
-        <button class="answer button"> answer:  6 </button>
-        <button class="answer button"> answer:  7 </button>
-        <button class="answer button"> answer:  8 </button>
-        <button class="answer button"> answer:  9 </button>
-        <button class="answer button"> answer:  10 </button>
-    </div> </br> 
+            <span class="question"> Questions here </span>
+            <br>
+            <div class="answers">
+                <button class="answer button"> answer: 1 </button>
+                <button class="answer button"> answer: 2 </button>
+                <button class="answer button"> answer: 3 </button>
+                <button class="answer button"> answer: 4 </button>
+                <button class="answer button"> answer: 5 </button>
+                <button class="answer button"> answer: 6 </button>
+                <button class="answer button"> answer: 7 </button>
+                <button class="answer button"> answer: 8 </button>
+                <button class="answer button"> answer: 9 </button>
+                <button class="answer button"> answer: 10 </button>
+            </div> </br>
+        </div>
+        <div class="controls-container">
+            <button class="start-quiz button"> START THE QUIZ</button>
+            <button class="next-question button hide"> NEXT QUESTION </button>
+        </div>
     </div>
-    <div class="controls-container">
-        <button class="start-quiz button"> START THE QUIZ</button>
-        <button class="next-question button hide"> NEXT QUESTION </button>
-    </div>
-    </div>
-    <div class="controls">
-        <a id="start" href="home.html">Start</a>
-    </div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
 </body>
+
 </html>

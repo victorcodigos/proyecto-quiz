@@ -107,7 +107,7 @@ button:not(:disabled):hover {
 .hide {
 
     display: none;
-
+    ;
 }
 
 .correct {
@@ -135,4 +135,9 @@ button:not(:disabled):hover {
     display: block;
     margin-top: 15px;
 
+}
+
+.h1 {
+
+    font-size: 50px;
 }
