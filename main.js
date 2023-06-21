@@ -14,34 +14,42 @@ const homeDiv = document.getElementById("homeNav");
 
 const aboutDiv = document.getElementById("aboutNav"); 
 
-const contactNav = document.getElementById("contactNav");
+/*const contactNav = document.getElementById("contactNav");
 
-const contactDiv = document.getElementById("contactDiv"); 
+const contactDiv = document.getElementById("contact"); */
+
+
+function hideViews () {
+    homeDiv.classList.add("hide");
+    aboutDiv.classList.add("hide");
+  /*  contactDiv.classList.add("hide"); */
+
+}
+
 
 function goAbout() {
-    homeDiv.classList.add("hide");
+    hideViews ();
     aboutDiv.classList.remove("hide");
-    contactDiv.classList.add("hide");
+    
 
 }
 
 function gohome() {
+    hideViews ();
     homeDiv.classList.remove("hide");
-    aboutDiv.classList.add("hide");
-    contactDiv.classList.add("hide");
+    
 
 }
 
-function goContact() {
-    homeDiv.classList.add("hide");
-    aboutDiv.classList.add("hide");
+/*function goContact() {
+    hideViews ();
     contactDiv.classList.remove("hide");
     
 }
 
 aboutNav.addEventListener("click", goAbout);
 homeNav.addEventListener("click", gohome);
-contactNav.addEventListener("click", goContact);
+/* contactNav.addEventListener("click", goContact); */
 
 
 
