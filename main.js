@@ -5,6 +5,45 @@ const questionsContainer = document.querySelector(".questions-container") // cog
 const answers = document.querySelector(".answers") // remove los hijos que esta div pueda tener 
 const questionSpan = document.querySelector(".question") // vamos coger la class span del html 
 const nextQuestionButton = document.querySelector(".next-question") // una class y hacer que el botón funcione para ir a la siguiente pregunta
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const home = document.getElementById("home");
+
+const about = document.getElementById("about");
+
+const homeDiv = document.getElementById("homeNav");
+
+const aboutDiv = document.getElementById("aboutNav"); 
+
+const contactNav = document.getElementById("contactNav");
+
+const contactDiv = document.getElementById("contactDiv"); 
+
+function goAbout() {
+    homeDiv.classList.add("hide");
+    aboutDiv.classList.remove("hide");
+    contactDiv.classList.add("hide");
+
+}
+
+function gohome() {
+    homeDiv.classList.remove("hide");
+    aboutDiv.classList.add("hide");
+    contactDiv.classList.add("hide");
+
+}
+
+function goContact() {
+    homeDiv.classList.add("hide");
+    aboutDiv.classList.add("hide");
+    contactDiv.classList.remove("hide");
+    
+}
+
+aboutNav.addEventListener("click", goAbout);
+homeNav.addEventListener("click", gohome);
+contactNav.addEventListener("click", goContact);
+
+
 
 startGameButton.addEventListener("click", startGame) // capturar el evento click para empezar el juego
 nextQuestionButton.addEventListener("click", displayNextquestion) // hacer que la siguiente pregunta aparezca en la pantalla
@@ -114,6 +153,8 @@ function finishTheQuiz() {
        `
 
 }
+
+
 
 /* criamos una variable questions de tipo array 
  propiedad question que es la propia pregunta 
