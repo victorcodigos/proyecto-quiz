@@ -14,16 +14,19 @@ button {
 body {
 
     /* Queiro que el color de fundo sea negro */
-    /* background: rgba(35, 34, 34, 0.742) url(assets/cranio.jpg) no-repeat center; */
+     background: rgba(0, 0, 0, 0.943) url(assets/try.gif); 
     /* Queiro que el color de las cosas sea blanco */
-    color: rgb(233, 225, 225);
+    color: rgb(213, 224, 10);
+    font-size: 25px;
     /* Para ocupar toda la pantalla */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+   
+
     /* background-image: url(assets/planets.jpg); */
-    background: rgba(125, 180, 216, 0.788);
+    /*background: rgba(125, 180, 216, 0.788); */
     
 
 
@@ -32,13 +35,13 @@ body {
 .container {
 
     /* class container: modificando dentro del div donde estarán las preguntas */
-    background-color: rgba(136, 136, 143, 0.771);
-    width: 45%;
+    background-color: rgba(27, 27, 30, 0.875);
+    width: 70%;
     max-width: 800%;
     /* border radius para dejar la borde un poco redondeado */
-    border-radius: 35px;
+    border-radius: 40px;
     padding: 30px;
-    border: 2px solid #e6141b;
+    border: 2px solid #fbff06;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,12 +51,12 @@ body {
 
 .questions-container {
 
-    width: 90%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* espacio que usamos para el espacio de los elementos que están dentro del div, en este caso los botones */
-    gap: 15px;
+    gap: 7px;
     justify-content: center;
 
 }
@@ -91,13 +94,15 @@ body {
     padding: 0 100px;
     border-radius: 10px;
     text-align: center;
-    transition: filter 0.4s;
+    transition: filter 0.9s;
+    
 
 }
 /* Si el botón está seleccionado, elimine el sombreado sobre los botones */
 button:not(:disabled):hover {
 
     filter: brightness(0.9);
+    
 }
  /* El user no puede selecionar la respuesta dos veces, el button se queda disabled */
 .button:disabled {
@@ -107,7 +112,7 @@ button:not(:disabled):hover {
 .hide {
 
     display: none;
-    ;
+    
 }
 
 .correct {
@@ -137,7 +142,15 @@ button:not(:disabled):hover {
 
 }
 
-.h1 {
+form{
+    width: 300px;
+    margin: 200px auto;
+    text-align: center;
+}
 
-    font-size: 50px;
+input{
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
 }

@@ -5,8 +5,32 @@ const questionsContainer = document.querySelector(".questions-container") // cog
 const answers = document.querySelector(".answers") // remove los hijos que esta div pueda tener 
 const questionSpan = document.querySelector(".question") // vamos coger la class span del html 
 const nextQuestionButton = document.querySelector(".next-question") // una class y hacer que el botón funcione para ir a la siguiente pregunta
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const home = document.getElementById("home");
+
+const formXp = document.getElementById("formXp");
+const submit = document.getElementById("submit");
+const start = document.getElementById("start");
+const neighbor = document.getElementById("neighbor");
+const ask = document.getElementById("ask");
+const container = document.getElementById("container");
+
+
+
+// preguntas from the API 
+
+const startingQuestions = () => {
+    axios
+        .get("https://opentdb.com/api.php?amount=50&category=21&difficulty=medium&type=multiple")
+        .then(res => {
+            const api = res.data.results;
+            console.log(api);
+            showAllTheQuestions(api);
+        })
+        .catch(error => console.error(error))
+}
+
+startingQuestions();
+
+/* const home = document.getElementById("home");
 
 const about = document.getElementById("about");
 
@@ -14,15 +38,15 @@ const homeDiv = document.getElementById("homeNav");
 
 const aboutDiv = document.getElementById("aboutNav"); 
 
-/*const contactNav = document.getElementById("contactNav");
+const contactNav = document.getElementById("contactNav");
 
-const contactDiv = document.getElementById("contact"); */
+const contactDiv = document.getElementById("contact"); 
 
 
 function hideViews () {
     homeDiv.classList.add("hide");
     aboutDiv.classList.add("hide");
-  /*  contactDiv.classList.add("hide"); */
+    contactDiv.classList.add("hide"); 
 
 }
 
@@ -41,7 +65,7 @@ function gohome() {
 
 }
 
-/*function goContact() {
+function goContact() {
     hideViews ();
     contactDiv.classList.remove("hide");
     
@@ -49,7 +73,7 @@ function gohome() {
 
 aboutNav.addEventListener("click", goAbout);
 homeNav.addEventListener("click", gohome);
-/* contactNav.addEventListener("click", goContact); */
+contactNav.addEventListener("click", goContact); */
 
 
 
