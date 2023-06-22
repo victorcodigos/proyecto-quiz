@@ -101,7 +101,7 @@ body {
 /* Si el botón está seleccionado, elimine el sombreado sobre los botones */
 button:not(:disabled):hover {
 
-    filter: brightness(0.9);
+    filter: brightness(0.4);
     
 }
  /* El user no puede selecionar la respuesta dos veces, el button se queda disabled */
@@ -153,4 +153,9 @@ input{
     margin: 10px auto;
     width: 250px;
     height: 30px;
+}
+
+footer {
+
+    text-align: center;
 }
