@@ -1,10 +1,10 @@
 // https://opentdb.com/api.php?amount=1 question from here, I selected one by one because 10 by 10 is too confusing
 
-const startGameButton = document.querySelector(".start-quiz") // criar una variable para empezar el juego
-const questionsContainer = document.querySelector(".questions-container") // coger la div que tenga la class container 
-const answers = document.querySelector(".answers") // remove los hijos que esta div pueda tener 
-const questionSpan = document.querySelector(".question") // vamos coger la class span del html 
-const nextQuestionButton = document.querySelector(".next-question") // una class y hacer que el botón funcione para ir a la siguiente pregunta
+const startGameButton = document.querySelector(".start-quiz") 
+const questionsContainer = document.querySelector(".questions-container") 
+const answers = document.querySelector(".answers") 
+const questionSpan = document.querySelector(".question") 
+const nextQuestionButton = document.querySelector(".next-question") 
 
 const formXp = document.getElementById("formXp");
 const submit = document.getElementById("submit");
@@ -30,118 +30,73 @@ const startingQuestions = () => {
 
 startingQuestions();
 
-/* const home = document.getElementById("home");
-
-const about = document.getElementById("about");
-
-const homeDiv = document.getElementById("homeNav");
-
-const aboutDiv = document.getElementById("aboutNav"); 
-
-const contactNav = document.getElementById("contactNav");
-
-const contactDiv = document.getElementById("contact"); 
 
 
-function hideViews () {
-    homeDiv.classList.add("hide");
-    aboutDiv.classList.add("hide");
-    contactDiv.classList.add("hide"); 
-
-}
-
-
-function goAbout() {
-    hideViews ();
-    aboutDiv.classList.remove("hide");
-    
-
-}
-
-function gohome() {
-    hideViews ();
-    homeDiv.classList.remove("hide");
-    
-
-}
-
-function goContact() {
-    hideViews ();
-    contactDiv.classList.remove("hide");
-    
-}
-
-aboutNav.addEventListener("click", goAbout);
-homeNav.addEventListener("click", gohome);
-contactNav.addEventListener("click", goContact); */
+startGameButton.addEventListener("click", startGame) 
+nextQuestionButton.addEventListener("click", displayNextquestion) 
 
 
 
-startGameButton.addEventListener("click", startGame) // capturar el evento click para empezar el juego
-nextQuestionButton.addEventListener("click", displayNextquestion) // hacer que la siguiente pregunta aparezca en la pantalla
-
-
-
-let currentQuestion = 0; // criamos una variable auxilar para saber en cual preguntas estamos
-let totalTheAnswerCorrect = 0; // vamos crear una variable para saber cuántas preguntas acertó el user
+let currentQuestion = 0; 
+let totalTheAnswerCorrect = 0; 
 
 function startGame() {
-    startGameButton.classList.add("hide") // added a class hide para que el button pueda desaparecer
-    questionsContainer.classList.remove("hide") // added el remove para que la div pueda reaparecer
-    displayNextquestion() // una función para que pueda mostrar la siguiente pregunta
+    startGameButton.classList.add("hide") 
+    questionsContainer.classList.remove("hide") 
+    displayNextquestion()
 }
 
 
-function displayNextquestion() { // esta función es para apresentar la proxima question 
+function displayNextquestion() { 
     resetAll()
 
     if (questions.length == currentQuestion) {
-        return finishTheQuiz() // return para dicer que el juego ha terminado
+        return finishTheQuiz() 
     }
 
-    questionSpan.textContent = questions[currentQuestion].question // aqui vamos coger la primera pregunta 
-    questions[currentQuestion].answers.forEach(answer => {  // esa función flecha es para acceder a las respuestas de la prugunta 1
-        const newAnswer = document.createElement("button")   // criar un elemento button para cada una das posibles respuestas 
-        newAnswer.classList.add("button", "answer")  // added las dos class que estan dentro de la div answers
-        newAnswer.textContent = answer.text // added las answer que estan dentro de la función con el forEach
+    questionSpan.textContent = questions[currentQuestion].question 
+    questions[currentQuestion].answers.forEach(answer => {  
+        const newAnswer = document.createElement("button")   
+        newAnswer.classList.add("button", "answer") 
+        newAnswer.textContent = answer.text 
         if (answer.correct) {
-            newAnswer.dataset.correct = answer.correct // added la info en el button en caso de la respuestas sea la correcta 
+            newAnswer.dataset.correct = answer.correct 
 
         }
 
-        answers.appendChild(newAnswer) // added un nuevo elemento con el appendChild , added elemento hijo (newAnswer)
+        answers.appendChild(newAnswer) 
 
-        newAnswer.addEventListener("click", selectAnswerCorrect) // Comprobar si el user eligió la respuesta correcta, vamos criar una función
+        newAnswer.addEventListener("click", selectAnswerCorrect) 
     })
 } 
 
 function resetAll() {
-    while (answers.firstChild) { // Para remover el primero hijo del elemento padre que seria el answers
-        answers.removeChild(answers.firstChild) // Nos gustaria remover el primero hijo del elemento padre
+    while (answers.firstChild) { 
+        answers.removeChild(answers.firstChild) 
 
     }
-
-    document.body.removeAttribute("class") // usaremos el método eliminar atributo para restablecer y comenzar con el color normal
-    nextQuestionButton.classList.add("hide") // Hacer que el botón de siguiente pregunta solo aparezca cuando seleccionamos la respuesta
+ 
+    document.body.removeAttribute("class") 
+    nextQuestionButton.classList.add("hide") 
 
 }
 
-function selectAnswerCorrect(e) {  // Cuando tenemos un evento del tipo addEventListener y temos la función selectAnswerCorrect podemos tener el parametro del tipo evento.
+function selectAnswerCorrect(e) {  
     const answerClicked = e.target
-    if (answerClicked.dataset.correct) {  // Si el botón en el que hizo clic tiene el dataSet, entonces su respuesta es correcta.
-        document.body.classList.add("correct") // si la respuesta esta correcta, que se quede en color verde 
-        totalTheAnswerCorrect++ // aquí contaremos/implementaremos cuántas preguntas acertó el usuario
+    if (answerClicked.dataset.correct) {  
+        document.body.classList.add("correct") 
+        totalTheAnswerCorrect++ 
     } else {
-        document.body.classList.add("incorrect") // si la respuesta esta incorrecta, que se quede en color rojo
+        document.body.classList.add("incorrect")
     }
 
     document.querySelectorAll(".answer").forEach(button => {
         if (button.dataset.correct) {
-            button.classList.add("correct") // Si la respuesta es correcta, notifique la respuesta en verde
+            button.classList.add("correct") 
         } else {
-            button.classList.add("incorrect") // Si la respuesta es incorrecta, notifique la respuesta en rojo 
+            button.classList.add("incorrect") 
         }
-        button.disabled = true; // El user puede selecionar la respuesta apenas una vez
+        button.disabled = true;
     })
 
     nextQuestionButton.classList.remove("hide")

@@ -1,5 +1,5 @@
 * {
-    /* dejar todo en el mismo patron */
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -7,38 +7,29 @@
 
 button {
 
-    /* dejar todos os buttons iguales */
     cursor: pointer;
 }
 
 body {
 
-    /* Queiro que el color de fundo sea negro */
+  
      background: rgba(0, 0, 0, 0.943) url(assets/try.gif); 
-    /* Queiro que el color de las cosas sea blanco */
     color: rgb(213, 224, 10);
     font-size: 25px;
-    /* Para ocupar toda la pantalla */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-   
-
-    /* background-image: url(assets/planets.jpg); */
-    /*background: rgba(125, 180, 216, 0.788); */
-    
 
 
 }
 
 .container {
 
-    /* class container: modificando dentro del div donde estarán las preguntas */
+    
     background-color: rgba(27, 27, 30, 0.875);
     width: 70%;
     max-width: 800%;
-    /* border radius para dejar la borde un poco redondeado */
     border-radius: 40px;
     padding: 30px;
     border: 2px solid #fbff06;
@@ -55,7 +46,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* espacio que usamos para el espacio de los elementos que están dentro del div, en este caso los botones */
     gap: 7px;
     justify-content: center;
 
@@ -98,13 +88,13 @@ body {
     
 
 }
-/* Si el botón está seleccionado, elimine el sombreado sobre los botones */
+
 button:not(:disabled):hover {
 
     filter: brightness(0.4);
     
 }
- /* El user no puede selecionar la respuesta dos veces, el button se queda disabled */
+
 .button:disabled {
     cursor: not-allowed;
 }
