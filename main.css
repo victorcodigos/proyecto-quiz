@@ -12,8 +12,9 @@ button {
 
 body {
 
-  
-     background: rgba(0, 0, 0, 0.943) url(assets/try.gif); 
+
+    background: rgba(0, 0, 0, 0.943) url(assets/try.gif) no-repeat;
+    background-size: cover;
     color: rgb(213, 224, 10);
     font-size: 25px;
     height: 100vh;
@@ -21,12 +22,11 @@ body {
     justify-content: center;
     align-items: center;
 
-
 }
 
 .container {
 
-    
+
     background-color: rgba(27, 27, 30, 0.875);
     width: 70%;
     max-width: 800%;
@@ -85,14 +85,14 @@ body {
     border-radius: 10px;
     text-align: center;
     transition: filter 0.9s;
-    
+
 
 }
 
 button:not(:disabled):hover {
 
     filter: brightness(0.4);
-    
+
 }
 
 .button:disabled {
@@ -102,7 +102,7 @@ button:not(:disabled):hover {
 .hide {
 
     display: none;
-    
+
 }
 
 .correct {
@@ -120,9 +120,9 @@ button:not(:disabled):hover {
 
     font-size: 25px;
     text-align: center;
-    
-    
-    
+
+
+
 }
 
 .final-message span {
@@ -132,13 +132,13 @@ button:not(:disabled):hover {
 
 }
 
-form{
+form {
     width: 300px;
     margin: 200px auto;
     text-align: center;
 }
 
-input{
+input {
     display: block;
     margin: 10px auto;
     width: 250px;
